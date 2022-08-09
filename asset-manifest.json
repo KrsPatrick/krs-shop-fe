@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/krs-shop-fe/static/css/main.78713f90.css",
+    "main.js": "/krs-shop-fe/static/js/main.d702975c.js",
+    "static/js/787.f015813c.chunk.js": "/krs-shop-fe/static/js/787.f015813c.chunk.js",
+    "static/media/crown.svg": "/krs-shop-fe/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
+    "index.html": "/krs-shop-fe/index.html",
+    "main.78713f90.css.map": "/krs-shop-fe/static/css/main.78713f90.css.map",
+    "main.d702975c.js.map": "/krs-shop-fe/static/js/main.d702975c.js.map",
+    "787.f015813c.chunk.js.map": "/krs-shop-fe/static/js/787.f015813c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78713f90.css",
+    "static/js/main.d702975c.js"
+  ]
+}

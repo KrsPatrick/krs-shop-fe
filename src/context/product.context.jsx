@@ -1,26 +1,17 @@
 import { createContext, useState, useEffect } from "react";
 
-import { onAuthStateChangedListener, creatUserDocumentFromAuth } from "../utils/firebase/firebase.utils";
+import PRODUCTS from "../shop-data.json"
 
-export const UserContext = createContext({
-    product: null,
-    setproduct: () => null,
+export const ProductContext = createContext({
+    products: [],
 })
 
-export const UserProvider = ({children}) => {
-    const [currentUser, setCurrentUser] = useState(null)
-    const value = {currentUser, setCurrentUser};
-
-    useEffect(() => {
-        const unsubscribe = onAuthStateChangedListener((user) => {
-            if(user){
-                creatUserDocumentFromAuth(user)
-            }
-            setCurrentUser(user)
-        })
-
-        return unsubscribe
-    }, [])
-
-    return <UserContext.Provider value={value}>{children}</UserContext.Provider>
+export const ProductsProvider = ({children}) => {
+    const [products,] = useState(PRODUCTS)
+    const value = {products}
+    return (
+        <ProductContext.Provider value={value} >{children}</ProductContext.Provider>
+    )
 }
+
+    

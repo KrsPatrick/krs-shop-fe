@@ -5,23 +5,22 @@ import { addCollectionAndDocument, getCategoriesAndDocuments } from "../utils/fi
 // import SHOP_DATA from "../shop-data.js"
 
 export const ProductContext = createContext({
-    products: [],
+    products: {},
 })
 
 export const ProductsProvider = ({children}) => {
     const [products, setProducts] = useState({})
-    
 
     useEffect(() => {
         const getCategriesMap = async () => {
             const categoryMap = await getCategoriesAndDocuments()
-            console.log(categoryMap);
             setProducts(categoryMap)
             
         }
         getCategriesMap()
     }, [])
 
+    console.log(products);
     // useEffect(() => {
     //     addCollectionAndDocument("categories", SHOP_DATA)
     // })
